@@ -10,6 +10,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void getLocation() async {
     Position position = await Geolocator()
         .getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
+    print(position);
   }
 
   @override
@@ -19,6 +20,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
         child: RaisedButton(
           onPressed: () {
             //Get the current location
+            getLocation();
           },
           child: Text('Get Location'),
         ),
