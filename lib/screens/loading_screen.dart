@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:clima/services/location.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+const apiKey = 'fe9850dfa45dcb568bb1828212b8d94a';
 
 class LoadingScreen extends StatefulWidget {
   @override
