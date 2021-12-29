@@ -11,7 +11,7 @@ class Location {
       latitude = position.latitude;
       longitude = position.longitude;
     } catch (e) {
-      print('getting location6');
+      print('getting location');
       print(e);
     }
   }
