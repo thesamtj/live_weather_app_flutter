@@ -62,6 +62,7 @@ flutter:
 
   assets:
     - images/
+    - sampleJSON/
 
   fonts:
     - family: Spartan MB

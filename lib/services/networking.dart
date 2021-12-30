@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -16,7 +17,12 @@ class NetworkHelper {
 
       return jsonDecode(data);
     } else {
-      print(response.statusCode);
+      print('Network call returns error code: ${response.statusCode}');
+      final String response2 =
+          await rootBundle.loadString('assets/sample.json');
+      final data = await json.decode(response2);
+
+      return data;
     }
   }
 }
