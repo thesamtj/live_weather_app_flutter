@@ -10,6 +10,7 @@ class NetworkHelper {
   Future getData() async {
     var url = Uri.parse(this.url);
 
+    print('Url call: $url');
     http.Response response = await http.get(url);
 
     if (response.statusCode == 200) {
