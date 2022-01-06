@@ -20,7 +20,7 @@ class NetworkHelper {
     } else {
       print('Network call returns error code: ${response.statusCode}');
       final String response2 =
-          await rootBundle.loadString('assets/sample.json');
+          await rootBundle.loadString('sampleJSON/weather_response.json');
       final data = await json.decode(response2);
 
       return data;
